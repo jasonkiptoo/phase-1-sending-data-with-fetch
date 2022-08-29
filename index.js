@@ -7,10 +7,11 @@ function submitData(userName,userEmail){
     };
 
    const createObj={
-    method:'POST',
+    method:"POST",
         headers:{
-            'Content-type':'application/json',
-            'Accept':'application/json'
+
+            "Content-type":"application/json",
+            "Accept":"application/json"
         },
         body:JSON.stringify(usersData),
     };
@@ -19,7 +20,9 @@ function submitData(userName,userEmail){
 
    return fetch("http://localhost:3000/users", createObj)
 
-    .then(function (response){return response.json()})
+    .then(function (response){
+        return response.json()
+    })
 
     .then(usersData => {
         let id = usersData["id"]
@@ -33,5 +36,5 @@ function submitData(userName,userEmail){
     });
 
  }
- submitData("new", "new@gmail.com")
+ submitData("new", "newom")
 
